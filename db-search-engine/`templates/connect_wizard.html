@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Connect to Database</h1>
+    <form action="/connect_wizard" method="post">
+        <div>
+            <label for="host">Host:</label>
+            <input type="text" id="host" name="host" required>
+        </div>
+        <div>
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="dbname">Database Name:</label>
+            <input type="text" id="dbname" name="dbname" required>
+        </div>
+        <button type="submit">Connect</button>
+    </form>
+</div>
+{% endblock %}
